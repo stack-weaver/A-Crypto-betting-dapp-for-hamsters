@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐹 Hamster Betting DApp
 
-## Getting Started
+## 🚀 Overview  
+**Hamster Betting DApp** is a decentralized application (DApp) that brings transparent and secure betting to the blockchain.  
+Users can connect their crypto wallets (e.g., MetaMask), place bets, view odds in real-time, and enjoy provably fair results — all powered by smart contracts.
 
-First, run the development server:
+The platform is fully decentralized, ensuring that all wagers, results, and payouts are handled via blockchain technology for trustless, transparent operations.
 
-```bash
+---
+
+## ✨ Key Features  
+- 🎲 **Decentralized Betting:** All bets and payouts are handled on-chain using smart contracts.  
+- 🔒 **Fair & Transparent:** Results are verifiable on the blockchain — no intermediaries or manipulation.  
+- 👛 **Wallet Integration:** Seamless login and interaction using MetaMask or WalletConnect.  
+- ⚡ **Instant Payouts:** Winners receive their rewards automatically after results are confirmed.  
+- 📊 **Real-Time Odds:** Odds update dynamically based on on-chain market data.  
+- 🧩 **User-Friendly UI:** Clean, responsive interface optimized for desktop and mobile devices.  
+- 🪙 **Crypto Native:** Supports Ethereum (or compatible EVM networks) with customizable token support.  
+
+---
+
+## 🧠 Architecture Overview  
+Frontend (Next.js / React)
+↓
+Smart Contracts (Solidity / Hardhat)
+↓
+Blockchain Network (Ethereum / Polygon / BSC)
+↓
+Backend API (Node.js / FastAPI - optional)
+↓
+Database (MongoDB / PostgreSQL - optional for off-chain data)
+
+markdown
+Copy code
+
+- **Frontend:** Built with React + Next.js for performance and dynamic routing.  
+- **Smart Contracts:** Solidity contracts handle all betting logic, payouts, and odds calculations.  
+- **Web3 Integration:** Uses `ethers.js` or `web3.js` to connect user wallets and handle transactions.  
+- **Backend (optional):** Can be used for analytics, off-chain history, or caching market data.  
+- **Deployment:** Hosted on [Vercel](https://vercel.com) for frontend and on a blockchain network for contracts.
+
+---
+
+## 🛠️ Tech Stack  
+| Layer | Technology |
+|:------|:------------|
+| **Frontend** | Next.js, React, Tailwind CSS |
+| **Smart Contracts** | Solidity, Hardhat / Foundry |
+| **Web3 Integration** | Ethers.js / Wagmi / RainbowKit |
+| **Backend (optional)** | Node.js / Express / FastAPI |
+| **Database** | MongoDB / PostgreSQL |
+| **Deployment** | Vercel (frontend), Ethereum / Polygon (contracts) |
+
+---
+
+## ⚙️ Installation & Setup  
+
+### 1. Clone the repository  
+bash
+```git clone https://github.com/your-username/hamster-betting-dapp.git```
+cd hamster-betting-dapp
+2. Install dependencies
+bash
+Copy code
+npm install
+# or
+yarn install
+3. Create .env file
+env
+Copy code
+NEXT_PUBLIC_RPC_URL=https://rpc.yournetwork.io
+NEXT_PUBLIC_CONTRACT_ADDRESS=0xYourContractAddress
+NEXT_PUBLIC_NETWORK=ethereum
+4. Run the development server
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Then open http://localhost:3000 to see it in action.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧪 Smart Contract Setup
+If you’re modifying or redeploying the contracts:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+bash
+Copy code
+cd smart-contracts
+npm install
+npx hardhat compile
+npx hardhat test
+npx hardhat run scripts/deploy.js --network <network-name>
+Update the deployed contract address in your .env file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+🧩 Features in Development
+🧮 Dynamic odds engine powered by on-chain oracles
 
-## Learn More
+🏆 Leaderboards and achievements
 
-To learn more about Next.js, take a look at the following resources:
+📱 Mobile-friendly PWA version
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🔮 AI-assisted prediction analysis
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+💸 Staking & liquidity pools for better odds
 
-## Deploy on Vercel
+🤝 Contributing
+Contributions are welcome!
+If you’d like to improve the DApp or add features:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Fork this repo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Create a feature branch (feature/add-new-market)
+
+Commit and push your changes
+
+Create a Pull Request
+
+📄 License
+This project is licensed under the MIT License — feel free to modify and use it for your own projects.
+
+👤 Maintainer
+Full-stack / AI / Blockchain Engineer
+Building decentralized apps, AI systems, and scalable full-stack platforms.
+
